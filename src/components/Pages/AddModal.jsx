@@ -49,8 +49,8 @@ function AddModal({ show, setShow, refresh }) {
         window.removeEventListener("keydown", handleEsc);
       };
     },
-    [show],
-    [setShow]
+    [show, setShow],
+    
   );
 
   if (!show) return null;

@@ -34,8 +34,7 @@ function UpdateModal({ show, setShow, id, editForm, setEditForm, refresh }) {
         window.removeEventListener("keydown", handleEsc);
       };
     },
-    [show],
-    [setShow]
+    [show,setShow]
   );
 
   if (!show) return null;
