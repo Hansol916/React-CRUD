@@ -35,19 +35,23 @@ function AddModal({ show, setShow, refresh }) {
     refresh();
   };
   // ESC 키로 모달 닫기
-  useEffect(() => {
-    if (!show) return;
+  useEffect(
+    () => {
+      if (!show) return;
 
-    const handleEsc = (e) => {
-      if (e.key === "Escape") {
-        setShow(false);
-      }
-    };
-    window.addEventListener("keydown", handleEsc);
-    return () => {
-      window.removeEventListener("keydown", handleEsc);
-    };
-  }, [show]);
+      const handleEsc = (e) => {
+        if (e.key === "Escape") {
+          setShow(false);
+        }
+      };
+      window.addEventListener("keydown", handleEsc);
+      return () => {
+        window.removeEventListener("keydown", handleEsc);
+      };
+    },
+    [show],
+    [setShow]
+  );
 
   if (!show) return null;
 
