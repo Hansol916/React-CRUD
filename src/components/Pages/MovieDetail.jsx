@@ -19,7 +19,7 @@ function MovieDetail({ id, setEditForm, setShowUpdate }) {
       rating: data.rating || "",
     });
 
-    setShowUpdate(true);
+    // setShowUpdate(true);
   };
 
   return <button onClick={fetchDetail}>조회하기</button>;
